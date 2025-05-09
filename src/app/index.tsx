@@ -6,6 +6,8 @@ import {Banner} from "../components/banner";
 import {Search} from "../components/search";
 import {Section} from "../components/section";
 import {Trending} from "../components/trending";
+import {Restaurants} from "../components/restaurants";
+import {RestauranteVerticalList} from "../components/list";
 
 const statusBarHeight = Constants.getStatusBarHeight;
 
@@ -22,7 +24,6 @@ export default function Index() {
                 <Banner/>
 
                 <Search/>
-
             </View>
 
             <Section
@@ -33,6 +34,24 @@ export default function Index() {
             />
 
             <Trending/>
+
+            <Section
+                name="Famosos no FomeFood"
+                label="Veja todos"
+                action={() => console.log("CLICOU NO VEJA MAIS")}
+                size="text-xl"
+            />
+
+            <Restaurants/>
+
+            <Section
+                name="Restaurantes"
+                label="Veja todos"
+                action={() => console.log("CLICOU NO RESTAURANTES")}
+                size="text-xl"
+            />
+
+            <RestauranteVerticalList/>
 
         </ScrollView>
     );
